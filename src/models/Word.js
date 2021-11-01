@@ -9,6 +9,6 @@ const wordSchema = mongoose.Schema({ //스키마 생성
     r_pos : {type: String, trim: true}
 })
 
-const Word = mongoose.model('Word', wordSchema, 'kor_dic_db3') //초기화
+const Word = mongoose.model('Word', wordSchema, 'kor_dic_db') //초기화
 module.exports = Word;
 
