@@ -20,15 +20,15 @@ app.use(logger('tiny')) //Logger 설정
 //API 설계 및 구현4-1
 app.use("/api", routes) // 제일먼저 구현
 
-// const CONNECT_URL = 'mongodb://localhost:27017/kor_dic_db'
+//const CONNECT_URL = 'mongodb://localhost:27017/kor_dic_db'
 
-const CONNECT_URL = "mongodb+srv://kimjeonggook:kimjg53380@@dic-kor.zg63d.mongodb.net/kor_dic_db?retryWrites=true&w=majority"
+const CONNECT_URL = 'mongodb+srv://kimjeonggook:1234@dic-kor.zg63d.mongodb.net/kor_dic_db?retryWrites=true&w=majority'
 
 mongoose.connect(CONNECT_URL,  {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("mongodb connected ..."))
-. catch(e => console.log('failed to connect mongodb: ${e}'))
+. catch(e => console.log(`failed to connect mongodb: ${e}`))
 
 
 // app.get('/hello', (req, res) => {    //
